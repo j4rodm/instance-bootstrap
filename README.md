@@ -142,3 +142,62 @@ flowchart LR
     SEC --> SECDOC["<a href='https://www.servicenow.com/products/security-operations.html' style='color:#2b8a3e'>SecOps page</a>"]
     IRM --> IRMDOC["<a href='https://www.servicenow.com/products/integrated-risk-management.html' style='color:#2b8a3e'>IRM page</a>"]
 ```
+## J. Flowchart link tests
+
+```mermaid
+flowchart LR
+    ROOT([SN Security Universe]) --> A["<a href='https://www.servicenow.com/products/security-operations.html'><span style='color:#d9480f'>1 inner span</span></a>"]
+    ROOT --> B["<a href='https://www.servicenow.com/products/security-operations.html'><font color='#2b8a3e'>2 inner font</font></a>"]
+    ROOT --> C["<a href='https://www.servicenow.com/products/security-operations.html' target='_top'>3 target _top</a>"]
+    ROOT --> D["<a href='https://www.servicenow.com/products/security-operations.html' target='_blank' rel='noopener'>4 target _blank</a>"]
+    style A fill:#fff4e6,stroke:#d9480f
+    style B fill:#ebfbee,stroke:#2b8a3e
+```
+## K. Cluttered map
+
+```mermaid
+flowchart LR
+    ROOT([SN Security Universe])
+
+    ROOT --> SEC[Security Operations]
+    ROOT --> VULN[Exposure and Vulnerability]
+    ROOT --> GRC[Risk and Compliance]
+
+    SEC --> SIR[Security Incident Response]
+    SEC --> TI[Threat Intelligence]
+    VULN --> VR[Vulnerability Response]
+    VULN --> CC[Configuration Compliance]
+    GRC --> IRM[Integrated Risk Management]
+    GRC --> TPR[Third-Party Risk]
+
+    SIR --> OVSEC["<a href='https://www.servicenow.com/products/security-operations.html'><font color='#1c7ed6'>SecOps overview</font></a>"]
+    VR --> OVVR["<a href='https://www.servicenow.com/products/vulnerability-response.html'><font color='#1c7ed6'>VR overview</font></a>"]
+    IRM --> OVIRM["<a href='https://www.servicenow.com/products/integrated-risk-management.html'><font color='#1c7ed6'>IRM overview</font></a>"]
+
+    SIR --> POD["<a href='https://podcasts.apple.com/podcast/id1439624860'><font color='#d9480f'>Podcast: Cyberthreat</font></a>"]
+    TI --> POD
+    IRM --> POD
+
+    SIR --> DOCS["<a href='https://docs.servicenow.com'><font color='#2b8a3e'>Product Docs</font></a>"]
+    VR --> DOCS
+    CC --> DOCS
+    IRM --> DOCS
+    TPR --> DOCS
+
+    VR --> STORE["<a href='https://store.servicenow.com/store/app/21d8a32e1be06a50a85b16db234bcb7e'><font color='#862e9c'>VR on the Store</font></a>"]
+    CC --> STORE
+
+    TI --> BLOG["<a href='https://www.servicenow.com/blogs.html'><font color='#e67700'>ServiceNow Blogs</font></a>"]
+    TPR --> BLOG
+    SIR --> BLOG
+
+    GRC --> COMM["<a href='https://www.servicenow.com/community/grc-articles/welcome-to-servicenow-risk-get-started-on-your-product-adoption/ta-p/3038531'><font color='#0b7285'>Community: Risk guide</font></a>"]
+    TPR --> COMM
+
+    classDef area fill:#e7f5ff,stroke:#1c7ed6
+    classDef sub fill:#f3f0ff,stroke:#7048e8
+    classDef leaf fill:#fff9db,stroke:#f08c00
+    class SEC,VULN,GRC area
+    class SIR,TI,VR,CC,IRM,TPR sub
+    class OVSEC,OVVR,OVIRM,POD,DOCS,STORE,BLOG,COMM leaf
+```
