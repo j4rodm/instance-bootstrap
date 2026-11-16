@@ -118,3 +118,16 @@ mindmap
       ["[Markdown link](https://www.servicenow.com/products/security-operations.html)"]
       Plain text for comparison
 ```
+
+## H. Link color tests
+
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#e8f4f8','primaryTextColor':'#1a1a1a','lineColor':'#2a6f8f'}}}%%
+mindmap
+  root((SN Security Universe))
+    Security Operations
+      <a href="https://www.servicenow.com/products/security-operations.html" style="color:#d9480f">1 anchor style</a>
+      <a href="https://www.servicenow.com/products/security-operations.html"><span style="color:#2b8a3e">2 inner span</span></a>
+      <a href="https://www.servicenow.com/products/security-operations.html"><font color="#862e9c">3 inner font</font></a>
+      Plain text for comparison
+```
