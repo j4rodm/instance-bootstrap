@@ -131,3 +131,14 @@ mindmap
       <a href="https://www.servicenow.com/products/security-operations.html"><font color="#862e9c">3 inner font</font></a>
       Plain text for comparison
 ```
+## I. Shared end node
+
+```mermaid
+flowchart LR
+    ROOT([SN Security Universe]) --> SEC[Security Operations]
+    ROOT --> IRM[Integrated Risk Management]
+    SEC --> POD["<a href='https://podcasts.apple.com/podcast/id1439624860' style='color:#d9480f'>Podcast: Cyberthreat</a>"]
+    IRM --> POD
+    SEC --> SECDOC["<a href='https://www.servicenow.com/products/security-operations.html' style='color:#2b8a3e'>SecOps page</a>"]
+    IRM --> IRMDOC["<a href='https://www.servicenow.com/products/integrated-risk-management.html' style='color:#2b8a3e'>IRM page</a>"]
+```
