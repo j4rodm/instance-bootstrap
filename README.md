@@ -108,3 +108,13 @@ mindmap
 
 </details>
 
+## G. Mindmap link tests
+
+```mermaid
+mindmap
+  root((SN Security Universe))
+    Security Operations
+      <a href="https://www.servicenow.com/products/security-operations.html" target="_blank">HTML anchor</a>
+      ["[Markdown link](https://www.servicenow.com/products/security-operations.html)"]
+      Plain text for comparison
+```
